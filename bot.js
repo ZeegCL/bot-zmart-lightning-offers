@@ -3,6 +3,7 @@ const jsonframe = require('jsonframe-cheerio');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const { IncomingWebhook } = require('@slack/webhook');
+const app = require('http');
 
 const frame = {
     'name': "[class*='_Descripcion'] > a",
@@ -59,9 +60,11 @@ setInterval(() => {
     });
 }, process.env.TIMEOUT_INTERVAL);
 
-app.listen(process.env.PORT, () => {
-    console.log(`App is running on port ${ PORT }, though it's useless right now.`);
-});
+const PORT = process.env.PORT;
+app.createServer(() => {})
+    .listen(PORT, () => {
+        console.log(`App is running on port ${ PORT }, though it's useless right now.`);
+    });
 
 function formatItemForSlack(item) {
     return `:zap: ${item.name} (${item.availability})\r\n:tada: ${item.discount} descuento - :moneybag: ${item.normal_price} :arrow_lower_right: ${item.offer_price}\r\n\r\n\r\n\r\n`;
