@@ -59,6 +59,10 @@ setInterval(() => {
     });
 }, process.env.TIMEOUT_INTERVAL);
 
+app.listen(process.env.PORT, () => {
+    console.log(`App is running on port ${ PORT }, though it's useless right now.`);
+});
+
 function formatItemForSlack(item) {
     return `:zap: ${item.name} (${item.availability})\r\n:tada: ${item.discount} descuento - :moneybag: ${item.normal_price} :arrow_lower_right: ${item.offer_price}\r\n\r\n\r\n\r\n`;
 }
