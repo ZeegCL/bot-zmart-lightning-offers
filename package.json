@@ -1,0 +1,37 @@
+{
+  "name": "bot-zmart-lightning-offers",
+  "version": "1.0.0",
+  "description": "Bot que te avisa sobre ofertas relámpagos en Zmart de items de tu interés... porque sí.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deku/bot-zmart-lightning-offers.git"
+  },
+  "keywords": [
+    "bot",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "José González",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deku/bot-zmart-lightning-offers/issues"
+  },
+  "homepage": "https://github.com/Deku/bot-zmart-lightning-offers#readme",
+  "dependencies": {
+    "@slack/webhook": "^5.0.2",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "jsonframe-cheerio": "^3.0.1"
+  },
+  "engines": {
+    "node": "10.15.3"
+  }
+}
